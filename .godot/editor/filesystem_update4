@@ -1,0 +1,12 @@
+res://UI's/main_menu.tscn
+res://Themes/Buttons/StartButtonTheme.tres
+res://Themes/Buttons/QuitButtonTheme.tres
+res://Themes/Buttons/CreditsButtonTheme.tres
+res://Themes/Buttons/SoundButtonTheme.tres
+res://UI's/credits_ui.tscn
+res://Levels/One/level_1.tscn
+res://MainCharacters/ninja_frog.tscn
+res://TileMaps/RF_Catacombs_v1.0/public-license.txt
+res://MainCharacters/MainCharacter.tscn
+res://MainCharacters/main_character.gd
+res://test_delete.tscn

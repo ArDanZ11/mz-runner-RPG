@@ -1,0 +1,130 @@
+[gd_scene load_steps=5 format=3 uid="uid://tcuxs764i8sm"]
+
+[ext_resource type="FontFile" uid="uid://cxnst5hcldj3j" path="res://Fonts/PeaberryDoublespace.ttf" id="1_2pnjs"]
+[ext_resource type="Script" uid="uid://jvdntyb2rbln" path="res://UI's/credits_ui.gd" id="1_p3bbu"]
+[ext_resource type="Texture2D" uid="uid://cpk2v37i3gqsd" path="res://Backgrounds-TileSets/Backgrounds/Stones & Brick Textures/Bluerock_Texture.jpg" id="2_c4ao2"]
+[ext_resource type="Texture2D" uid="uid://csaalv2dbk1ng" path="res://ButtonIcons/BackIcon.png" id="4_et0qj"]
+
+[node name="CreditsUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p3bbu")
+
+[node name="CreditsHolder" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CreditsHolder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_c4ao2")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="MusicLabel" type="Label" parent="CreditsHolder"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 442.0
+offset_top = 51.0
+offset_right = 700.0
+offset_bottom = 122.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_2pnjs")
+theme_override_font_sizes/font_size = 70
+text = "Music:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsHolder/MusicLabel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 69.0
+offset_right = 216.0
+offset_bottom = 120.0
+
+[node name="Authors" type="Label" parent="CreditsHolder/MusicLabel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_2pnjs")
+theme_override_font_sizes/font_size = 50
+text = "Lexica"
+
+[node name="Backbutton" type="Button" parent="CreditsHolder"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 31.0
+offset_top = 15.0
+offset_right = 143.0
+offset_bottom = 123.0
+tooltip_text = "Back"
+theme_override_icons/icon = ExtResource("4_et0qj")
+flat = true
+icon_alignment = 2
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="FontsLabel" type="Label" parent="CreditsHolder"]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 243.0
+offset_right = 705.0
+offset_bottom = 314.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_2pnjs")
+theme_override_font_sizes/font_size = 70
+text = "Fonts:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsHolder/FontsLabel"]
+layout_mode = 0
+offset_left = -133.0
+offset_top = 80.0
+offset_right = 408.0
+offset_bottom = 131.0
+
+[node name="Authorsemhuo" type="Label" parent="CreditsHolder/FontsLabel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.964706, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_2pnjs")
+theme_override_font_sizes/font_size = 50
+text = "Peaberry by emhuo"
+
+[node name="Art" type="Label" parent="CreditsHolder"]
+texture_filter = 1
+layout_mode = 2
+offset_left = 381.0
+offset_top = 405.0
+offset_right = 752.0
+offset_bottom = 476.0
+theme_override_fonts/font = ExtResource("1_2pnjs")
+theme_override_font_sizes/font_size = 70
+text = "Art"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CreditsHolder/Art"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 44.0
+offset_top = 67.0
+offset_right = 326.0
+offset_bottom = 118.0
+
+[node name="Author" type="Label" parent="CreditsHolder/Art/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_2pnjs")
+theme_override_font_sizes/font_size = 50
+text = "Szadi art"
+
+[connection signal="pressed" from="CreditsHolder/Backbutton" to="." method="_on_backbutton_pressed"]

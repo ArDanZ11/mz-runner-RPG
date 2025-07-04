@@ -1,0 +1,160 @@
+[gd_scene load_steps=11 format=3 uid="uid://csev0dijfow4l"]
+
+[ext_resource type="Script" uid="uid://3xe7e5nhlhy1" path="res://UI's/main_menu.gd" id="1_6xlsu"]
+[ext_resource type="Texture2D" uid="uid://deebjv6ewb7o4" path="res://Backgrounds-TileSets/Backgrounds/Stones & Brick Textures/Brickwall_Texture.png" id="1_g1dqp"]
+[ext_resource type="FontFile" uid="uid://cxnst5hcldj3j" path="res://Fonts/PeaberryDoublespace.ttf" id="2_tfap2"]
+[ext_resource type="Theme" uid="uid://c8pmmtabcg00h" path="res://Themes/Buttons/StartButtonTheme.tres" id="3_ro0bx"]
+[ext_resource type="AudioStream" uid="uid://bfogx3uw6d0dy" path="res://Music/Lexicon - Tiger Tracks.mp3" id="4_ro0bx"]
+[ext_resource type="Theme" uid="uid://j5ofap0ihsgr" path="res://Themes/Buttons/QuitButtonTheme.tres" id="5_jssya"]
+[ext_resource type="Theme" uid="uid://drnse1u03lq07" path="res://Themes/Buttons/CreditsButtonTheme.tres" id="6_j7g54"]
+[ext_resource type="Theme" uid="uid://cscbu615aceay" path="res://Themes/Buttons/SoundButtonTheme.tres" id="7_ab6hu"]
+[ext_resource type="Texture2D" uid="uid://bp0ci64hdeyap" path="res://ButtonIcons/AudioPlaying.png" id="8_y7l1e"]
+[ext_resource type="Texture2D" uid="uid://cij2p7sccpa4y" path="res://ButtonIcons/AudioPlayiyingFalse.png" id="9_vlbno"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6xlsu")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g1dqp")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Start" type="Button" parent="Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -112.5
+offset_right = 236.0
+offset_bottom = -17.5
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Click to start"
+theme = ExtResource("3_ro0bx")
+theme_override_colors/font_disabled_color = Color(0, 1, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(4.69275e-07, 0.490135, 9.62615e-07, 1)
+theme_override_colors/font_hover_color = Color(0, 0.490196, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 1, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 1, 0, 1)
+theme_override_colors/font_pressed_color = Color(2.07564e-07, 0.260467, 2.16588e-07, 1)
+theme_override_fonts/font = ExtResource("2_tfap2")
+theme_override_font_sizes/font_size = 70
+text = "Start game"
+
+[node name="Quit" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = 21.5
+offset_right = 99.0
+offset_bottom = 100.5
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Press to quit"
+theme = ExtResource("5_jssya")
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.552962, 1.35969e-06, 4.81307e-07, 1)
+theme_override_colors/font_hover_color = Color(0.552941, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_tfap2")
+theme_override_font_sizes/font_size = 70
+text = "Quit"
+
+[node name="Label" type="Label" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 221.0
+offset_top = 53.0
+offset_right = 860.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1.68458e-06, 0, 0.627463, 1)
+theme_override_fonts/font = ExtResource("2_tfap2")
+theme_override_font_sizes/font_size = 70
+text = "Dungeon Runner"
+
+[node name="Credtis" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.0
+offset_top = 140.5
+offset_right = 169.0
+offset_bottom = 223.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_j7g54")
+theme_override_colors/font_hover_pressed_color = Color(0.63088, 0.000294368, 0.630875, 1)
+theme_override_colors/font_hover_color = Color(0.631373, 0, 0.631373, 1)
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.502795, 0.000179095, 0.502792, 1)
+theme_override_fonts/font = ExtResource("2_tfap2")
+theme_override_font_sizes/font_size = 70
+text = "Credits"
+
+[node name="SoundButton" type="TextureButton" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 36.0
+offset_top = 27.0
+offset_right = 150.0
+offset_bottom = 145.0
+tooltip_text = "Music Control"
+theme = ExtResource("7_ab6hu")
+toggle_mode = true
+texture_normal = ExtResource("8_y7l1e")
+texture_pressed = ExtResource("9_vlbno")
+stretch_mode = 0
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ro0bx")
+
+[connection signal="pressed" from="Panel/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Panel/Credtis" to="." method="_on_credtis_pressed"]
+[connection signal="pressed" from="Panel/SoundButton" to="." method="_on_sound_button_pressed"]

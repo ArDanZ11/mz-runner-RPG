@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cscbu615aceay"]
+
+[ext_resource type="Texture2D" uid="uid://bp0ci64hdeyap" path="res://ButtonIcons/AudioPlaying.png" id="1_u8h1t"]
+[ext_resource type="Texture2D" uid="uid://cij2p7sccpa4y" path="res://ButtonIcons/AudioPlayiyingFalse.png" id="2_h2lol"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ra57l"]
+texture = ExtResource("1_u8h1t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pabk2"]
+texture = ExtResource("2_h2lol")
+
+[resource]
+Button/icons/icon = ExtResource("1_u8h1t")
+Button/styles/normal = SubResource("StyleBoxTexture_ra57l")
+Button/styles/pressed = SubResource("StyleBoxTexture_pabk2")
